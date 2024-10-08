@@ -1,1 +1,1 @@
-    print('this is a trial code')
+print('this is a trial code')
