@@ -1,0 +1,8 @@
+import random 
+anions=["Carbonate","Chloride","Bromide","Iodide","Nitrate","Sulphate"]
+a=random.choice(anions)
+import mysql.connector as m
+mydb=m.connect(host='localhost',user='root',password="puturpassword")
+c=m.connect()
+prelim=["dil_H2SO4","conc_H2SO4","conc_H2SO4heating","BaCl2"]
+confirm=["Limewater","AgNO3","Brown_Ring_Test","LeadAcetate"]
