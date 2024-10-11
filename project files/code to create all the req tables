@@ -2,8 +2,8 @@
 import mysql.connector as m
 mydb=m.connect(host="localhost",user="root",password="Misocat_123")
 c=mydb.cursor()
-c.execute("create database saltsz;")
-c.execute("use saltsz;")
+c.execute("create database salts;")
+c.execute("use salts;")
 c.execute("""create table chloride(dil_H2SO4 varchar(30),conc_H2SO4 varchar(30),conc_H2SO4heating varchar(30),BaCl2 varchar(30),Limewater varchar(30),AgNO3 varchar(30),Brown_Ring_Test varchar(30),LeadAcetate varchar(30));""")
 c.execute("""insert into chloride values("No effervesence","White Fumes","White Fumes","No precipitate","Lime Water does not turn milky","White precipitate","Not given by this anion","Not given by this anion");""")
 mydb.commit()
