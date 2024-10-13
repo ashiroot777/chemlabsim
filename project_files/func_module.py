@@ -17,6 +17,7 @@ def generate_salt():
 #concatenating both the strings to form the variable which stores salt name
     salt = c + ' ' + a 
 
+    print('a salt has been generated for analysation!')
     return salt
 
 #creating function for establishing connection
