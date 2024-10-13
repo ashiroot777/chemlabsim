@@ -6,8 +6,8 @@ import random
 
 def generate_salt():
 # making a list of anions and cations
-    anions=["Carbonate","Chloride","Bromide","Iodide","Nitrate","Sulphate"]
-    cations=["Ammonium","Aluminium","Zinc","Strontium","Magnesium","Manganese","Calcium","Barium","Cadmium"]
+    anions=["carbonate","chloride","bromide","iodide","nitrate","sulphate"]
+    cations=["ammonium","aluminium","zinc","strontium","magnesium","manganese","calcium","barium","cadmium"]
 #using random to generate them
     global a
     global c
