@@ -4,7 +4,21 @@
 import func_module as fm
 fm.connect_mysql()
 
+#checking whether database exists
+fm.c.execute('show databases;')
+data=(fm.c.fetchall())
+if ('salts',) in data:
+    overwrite = input('do you want to replace this table with a new one?\n enter Y for yes and N for no\nyour choice :')
+    if overwrite == 'Y':
+        fm.c.execute('drop database salts;')
+    else:
+        print('try again!')
+
 #table creation code
+fm.c.execute("""create table carbonate(dil_H2SO4 varchar(30),conc_H2SO4 varchar(30),conc_H2SO4_heating varchar(30),BaCl2 varchar(30),Limewater varchar(30),AgNO3 varchar(30),Brown_Ring_Test varchar(30),LeadAcetate varchar(30));""")
+fm.c.execute("""insert into carbonate values("brisk effervesence","No Fumes","No Fumes","No precipitate","Lime Water turns milky","No precipitate","Not given by this anion","Not given by this anion");""")
+fm.mydb.commit()
+
 fm.c.execute("create database salts;")
 fm.c.execute("use salts;")
 fm.c.execute("""create table chloride(dil_H2SO4 varchar(30),conc_H2SO4 varchar(30),conc_H2SO4heating varchar(30),BaCl2 varchar(30),Limewater varchar(30),AgNO3 varchar(30),Brown_Ring_Test varchar(30),LeadAcetate varchar(30));""")
@@ -29,8 +43,5 @@ fm.c.execute("""create table Sulphate(dil_H2SO4 varchar(30),conc_H2SO4 varchar(3
 fm.c.execute("""insert into Sulphate values("No effervesence","No Fumes","No Fumes","White precipitate","Lime Water does not turn milky","No precipitate","Not given by this anion","White precipitate");""")
 fm.mydb.commit()
 
-fm.c.execute("""create table carbonate(dil_H2SO4 varchar(30),conc_H2SO4 varchar(30),conc_H2SO4heating varchar(30),BaCl2 varchar(30),Limewater varchar(30),AgNO3 varchar(30),Brown_Ring_Test varchar(30),LeadAcetate varchar(30));""")
-fm.c.execute("""insert into carbonate values("brisk effervesence","No Fumes","No Fumes","No precipitate","Lime Water turns milky","No precipitate","Not given by this anion","Not given by this anion");""")
-fm.mydb.commit()
-
+print('installed files!')
 #ANIONS CREATED
