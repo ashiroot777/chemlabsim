@@ -23,8 +23,6 @@ fm.c.execute("""insert into carbonate values("brisk effervesence","No Fumes","No
 fm.mydb.commit()
 
 fm.c.execute("""create table chloride(dil_H2SO4 varchar(30),conc_H2SO4 varchar(30),conc_H2SO4h_eating varchar(30),BaCl2 varchar(30),Limewater varchar(30),AgNO3 varchar(30),Brown_Ring_Test varchar(30),LeadAcetate varchar(30));""")
-fm.mydb.commit()
-
 fm.c.execute("""insert into chloride values("No effervesence","White Fumes","White Fumes","No precipitate","Lime Water does not turn milky","White precipitate","Not given by this anion","Not given by this anion");""")
 fm.mydb.commit()
 
