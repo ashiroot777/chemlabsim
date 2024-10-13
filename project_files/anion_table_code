@@ -21,25 +21,25 @@ fm.mydb.commit()
 
 fm.c.execute("create database salts;")
 fm.c.execute("use salts;")
-fm.c.execute("""create table chloride(dil_H2SO4 varchar(30),conc_H2SO4 varchar(30),conc_H2SO4heating varchar(30),BaCl2 varchar(30),Limewater varchar(30),AgNO3 varchar(30),Brown_Ring_Test varchar(30),LeadAcetate varchar(30));""")
+fm.c.execute("""create table chloride(dil_H2SO4 varchar(30),conc_H2SO4 varchar(30),conc_H2SO4h_eating varchar(30),BaCl2 varchar(30),Limewater varchar(30),AgNO3 varchar(30),Brown_Ring_Test varchar(30),LeadAcetate varchar(30));""")
 
 #inserting values
 fm.c.execute("""insert into chloride values("No effervesence","White Fumes","White Fumes","No precipitate","Lime Water does not turn milky","White precipitate","Not given by this anion","Not given by this anion");""")
 fm.mydb.commit()
 
-fm.c.execute("""create table bromide(dil_H2SO4 varchar(30),conc_H2SO4 varchar(30),conc_H2SO4heating varchar(30),BaCl2 varchar(30),Limewater varchar(30),AgNO3 varchar(30),Brown_Ring_Test varchar(30),LeadAcetate varchar(30));""")
+fm.c.execute("""create table bromide(dil_H2SO4 varchar(30),conc_H2SO4 varchar(30),conc_H2SO4_heating varchar(30),BaCl2 varchar(30),Limewater varchar(30),AgNO3 varchar(30),Brown_Ring_Test varchar(30),LeadAcetate varchar(30));""")
 fm.c.execute("""insert into bromide values("No effervesence","Light Brown Fumes","Light Brown Fumes","No precipitate","Lime Water does not turn milky","Pale yellow precipitate ","Not given by this anion","Not given by this anion");""")
 fm.mydb.commit()
 
-fm.c.execute("""create table iodide(dil_H2SO4 varchar(30),conc_H2SO4 varchar(30),conc_H2SO4heating varchar(30),BaCl2 varchar(30),Limewater varchar(30),AgNO3 varchar(30),Brown_Ring_Test varchar(30),LeadAcetate varchar(30));""")
+fm.c.execute("""create table iodide(dil_H2SO4 varchar(30),conc_H2SO4 varchar(30),conc_H2SO4_heating varchar(30),BaCl2 varchar(30),Limewater varchar(30),AgNO3 varchar(30),Brown_Ring_Test varchar(30),LeadAcetate varchar(30));""")
 fm.c.execute("""insert into iodide values("No effervesence","Violet Fumes","Violet Fumes","No precipitate","Lime Water does not turn milky","Pale yellow precipitate","Not given by this anion","Not given by this anion");""")
 fm.mydb.commit()
 
-fm.c.execute("""create table nitrate(dil_H2SO4 varchar(30),conc_H2SO4 varchar(30),conc_H2SO4heating varchar(30),BaCl2 varchar(30),Limewater varchar(30),AgNO3 varchar(30),Brown_Ring_Test varchar(30),LeadAcetate varchar(30));""")
+fm.c.execute("""create table nitrate(dil_H2SO4 varchar(30),conc_H2SO4 varchar(30),conc_H2SO4_heating varchar(30),BaCl2 varchar(30),Limewater varchar(30),AgNO3 varchar(30),Brown_Ring_Test varchar(30),LeadAcetate varchar(30));""")
 fm.c.execute("""insert into nitrate values("No effervesence","No Fumes","Light Brown Fumes","No precipitate","Lime Water does not turn milky","No precipitate","A dark brown ring is formed","Not given by this anion");""")
 fm.mydb.commit()
 
-fm.c.execute("""create table Sulphate(dil_H2SO4 varchar(30),conc_H2SO4 varchar(30),conc_H2SO4heating varchar(30),BaCl2 varchar(30),Limewater varchar(30),AgNO3 varchar(30),Brown_Ring_Test varchar(30),LeadAcetate varchar(30));""")
+fm.c.execute("""create table Sulphate(dil_H2SO4 varchar(30),conc_H2SO4 varchar(30),conc_H2SO4_heating varchar(30),BaCl2 varchar(30),Limewater varchar(30),AgNO3 varchar(30),Brown_Ring_Test varchar(30),LeadAcetate varchar(30));""")
 fm.c.execute("""insert into Sulphate values("No effervesence","No Fumes","No Fumes","White precipitate","Lime Water does not turn milky","No precipitate","Not given by this anion","White precipitate");""")
 fm.mydb.commit()
 
