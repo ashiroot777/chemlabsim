@@ -14,15 +14,15 @@ def generate_salt():
     c=random.choice(cations)
 
 #concatenating both the strings to form the variable which stores salt name
-    salt = c + '' + a 
+    salt = c + ' ' + a 
 
     return salt
 
 #creating function for establishing connection
 
-def connect_mysql(pass_word):
+def connect_mysql():
 #taking password from user
-    password = str(input('Enter your MySQL password : '))
+    pass_word = str(input('Enter your MySQL password : '))
     import mysql.connector as m
 #connecting
     global mydb
