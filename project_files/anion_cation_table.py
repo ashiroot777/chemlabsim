@@ -80,5 +80,6 @@ fm.mydb.commit()
 
 fm.c.execute("""create table magnesium(conc_NaOH_heating varchar(30),dil_HCl varchar(30),dil_HCl_H2S varchar(30),solid_NH4Cl_excess_NH4OH varchar(30),solid_NH4Cl_excess_NH4OH_H2S varchar(30),solid_NH4Cl_excess_NH4OH_ammoniumCarbonate varchar(30),solid_NH4Cl_excess_NH4OH_ammoniumPhosphate varchar(30),Nesslers_reagent varchar(30),potassium_hexacyanoferrate varchar(30),blue_lake_test varchar(30),sodium_hydroxide_test varchar(30),potassium_chromate_test varchar(30),ammonium_sulphate_test varchar(30),ammonium_oxalate_test varchar(30),magneton_reagent varchar(30));""")
 fm.c.execute("""insert into magnesium values("no ammonical smell","No precipitate","No precipitate","No precipitate","no precipitate","white precipitate","No precipitate","no precipitate","not given by this ion","not given by this ion","not given by this ion","no precipitate","not given by this ion","no precipitate","blue precipitate");""")
+fm.mydb.commit()
 
 print('installed files!')
