@@ -10,12 +10,13 @@ def generate_salt():
     cations=["ammonium","aluminium","zinc","strontium","magnesium","manganese","calcium","barium","cadmium"]
 #using random to generate them
     global a
-    global c
+    global cat
     a=random.choice(anions)
-    c=random.choice(cations)
+    cat=random.choice(cations)
 
 #concatenating both the strings to form the variable which stores salt name
-    salt = c + ' ' + a 
+    global salt
+    salt = cat + ' ' + a 
 
     return salt
 
