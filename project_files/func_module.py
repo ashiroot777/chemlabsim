@@ -1,4 +1,4 @@
-#functionmodule
+#function module
 
 import random 
 
