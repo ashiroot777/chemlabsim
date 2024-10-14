@@ -18,9 +18,9 @@ confirm_anion=["Limewater","AgNO3","Brown_Ring_Test","LeadAcetate"]
 notepad='' 
 
 sql="select {} from anions where anion = %s ;"
-
+condition=0
 # menu driven loop for matching ion with test
-while True:
+while condition==0:
 
 #menu for preliminary tests of anion
     menu=int(input("\nMENU:\n\n0.Add dilute sulphuric acid to salt\n1.Add concentrated sulphuric acid to salt\n2.Add concentrated sulphuric acid to salt,heat test tube and add copper chip\n3.Add Barium Chloride to salt solution\n4.Use notepad\n5.Move on to confirmatory tests\n6.Quit\nchoose option : "))
@@ -66,7 +66,9 @@ while True:
                 
                 if fm.anions[anion_guess - 1] == fm.anion: 
                     print('good job, your answer is correct!')
-                    exit
+                    condition=1
+                    break
+
 
                 else:
                     print('oops, try again!')                
