@@ -1,8 +1,9 @@
 #main program
-choice = int(input('MAIN MENU\n\n1.analyse anion\n2.analyse cation\n3.review chart'))
+while True:
+    choice = int(input('MAIN MENU :\n\n1.begin analysing salt\n2.review chart'))
 
-if choice == 1:
-    import analysing_anion 
+    if choice == 1:
+        import analysing_anion 
 
-elif choice == 2:
-    import analysing_cation
+    elif choice == 2:
+        import analysing_cation

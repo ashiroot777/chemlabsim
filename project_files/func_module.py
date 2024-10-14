@@ -6,18 +6,20 @@ import random
 
 def generate_salt():
 # making a list of anions and cations
+    global anions
+    global cations
     anions=["carbonate","chloride","bromide","iodide","nitrate","sulphate"]
     cations=["ammonium","aluminium","zinc","strontium","magnesium","manganese","calcium","barium","cadmium"]
 #using random to generate them
-    global a
-    global cat
-    a=random.choice(anions)
-    cat=random.choice(cations)
+    global anion
+    global cation
+    anion =random.choice(anions)
+    cation =random.choice(cations)
 
 #concatenating both the strings to form the variable which stores salt name
     global salt
-    salt = cat + ' ' + a 
-
+    salt = cation + ' ' + anion
+#returning generated salt
     return salt
 
 #creating function for establishing connection
@@ -33,4 +35,4 @@ def connect_mysql():
     global c
     c=mydb.cursor()
 
-    print('connection established!')
+    print('connection established!') 

@@ -3,7 +3,7 @@ import tables
 import func_module as fm
 
 #generating salt
-fm.generate_salt()
+salt_gen = fm.generate_salt()
 
 #connection
 fm.connect_mysql()
@@ -27,7 +27,7 @@ while True:
     
 #printing result from table
     if menu in range(4):
-        fm.c.execute(sql.format(prelim_anion[menu],),(fm.a,))
+        fm.c.execute(sql.format(prelim_anion[menu],),(fm.anion,))
         result=fm.c.fetchall()
         print('\nResult of the test is:\n',result[0][0])
 
@@ -41,28 +41,45 @@ while True:
     elif menu == 5:
         while True:
 #menu for confirmatory tests of anion
-            menu1=int(input('\nMENU:\n\n0.pass gas from effervescence through limewater\n1.Add silver nitrate to salt solution\n2.Add freshly prepared ferrous sulphate and add concentrated sulphuric acid dropwise\n3.Add acetic acid and lead acetate to salt solution\n4.Use notepad\n5.go back to preliminary tests\n6.move on to cation\nchoose option : '))
+            menu1=int(input('\nMENU:\n\n0.pass gas from effervescence through limewater\n1.Add silver nitrate to salt solution\n2.Add freshly prepared ferrous sulphate and add concentrated sulphuric acid dropwise\n3.Add acetic acid and lead acetate to salt solution\n4.Use notepad\n5.go back to preliminary tests\n6.guess anion\n7.move on to cation\nchoose option : '))
  
- #printing result from table           
+#printing result from table           
             if menu1 in range(4):
-                fm.c.execute(sql.format(confirm_anion[menu1],),(fm.a,))
+                fm.c.execute(sql.format(confirm_anion[menu1],),(fm.anion,))
                 result=fm.c.fetchall()
                 print('\nResult of the test is:\n',result[0][0])
 
- #using notepad           
+#using notepad           
             elif menu1 == 4:
                 print('\nopening notepad')
                 print(notepad)
                 notes = input('enter your notes:\n')
                 notepad += notes
 
-#exiting confirmatory         
+#go back to preliminary tests         
             elif menu1 == 5: 
-                break  
+                break  #exits confirmatory loop
 
-            elif menu1 == 6:
-                exit
+#guess anion
+            elif menu1 == 6: 
+                anion_guess=int(input('\nchoose anion name:\n\n1.carbonate\n2.chloride\n3.bromide\n4.iodide\n5.nitrate\n6.sulphate\n\nyour option : '))
+                
+                if fm.anions[anion_guess - 1] == fm.anion: 
+                    print('good job, your answer is correct!')
+                    exit
 
-    else:
+                else:
+                    print('oops, try again!')                
+
+#move onto cation
+            elif menu1 == 7: 
+                exit # this function exits program
+
+#quit option from preliminary menu        
+    elif menu == 6:
         break 
+
+#option invalid
+    else:
+        print('invalid option!')
 
