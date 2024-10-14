@@ -82,4 +82,3 @@ while True:
 #option invalid
     else:
         print('invalid option!')
-
