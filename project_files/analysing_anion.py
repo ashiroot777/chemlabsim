@@ -66,6 +66,7 @@ while condition == 0:
                 
                 if fm.anions[anion_guess - 1] == fm.anion: 
                     print('good job, your answer is correct!')
+
                     condition = 1
                     break
 
