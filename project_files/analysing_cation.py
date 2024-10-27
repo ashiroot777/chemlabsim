@@ -1,6 +1,7 @@
 #analysing cation
 import tables
 import func_module as fm
+import analysing_anion
 
 #generating salt
  

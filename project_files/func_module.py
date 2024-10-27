@@ -35,4 +35,4 @@ def connect_mysql():
     global c
     c=mydb.cursor()
 
-    print('connection established!') 
+    print('connection established!')   
